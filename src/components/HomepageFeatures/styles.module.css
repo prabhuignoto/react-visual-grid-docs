@@ -6,6 +6,11 @@
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 70px;
+  width: 70px;
+  color: #1E90FF;
+}
+
+.feature-item {
+  margin: 2rem 0 ;
 }

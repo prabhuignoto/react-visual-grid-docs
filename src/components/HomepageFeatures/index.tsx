@@ -1,5 +1,5 @@
-import React from 'react';
 import clsx from 'clsx';
+import React from 'react';
 import styles from './styles.module.css';
 
 type FeatureItem = {
@@ -10,32 +10,58 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Built for Performance',
+    Svg: require('@site/static/img/zap.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        react-visual-grid is built with performance in mind.
+        It uses the virtualization technique to render only the visible items efficiently.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Support for Multiple layouts',
+    Svg: require('@site/static/img/layout.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+       Multiple layouts to satisfy the needs of different use cases.
+       Rendering horizontal or vertical layouts is as easy as passing a prop.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Masonry Grid',
+    Svg: require('@site/static/img/grid.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Build beautiful masonry grids with ease. Comes with 2 different modes to quickly & easily build your masonry grids.
+      </>
+    ),
+  },
+  {
+    title: 'Customizable Thumbnail sizes',
+    Svg: require('@site/static/img/image.svg').default,
+    description: (
+      <>
+        Take control of the thumbnail sizes. You can set the width and height of the thumbnails. 3 different dimensions are supported.
+      </>
+    ),
+  },
+  {
+    title: 'Resizable',
+    Svg: require('@site/static/img/full-screen.svg').default,
+    description: (
+      <>
+        Easily change the dimensions of the grid with the resizable feature. Drag with mouse or touch to resize the grid to your liking.
+      </>
+    ),
+  },
+  {
+    title: 'Customizable color scheme',
+    Svg: require('@site/static/img/heart.svg').default,
+    description: (
+      <>
+        Change the color scheme of the grid to match your brand. Customize every element of the grid to match your needs.
       </>
     ),
   },
@@ -43,7 +69,7 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({title, Svg, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--4', styles['feature-item'])}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
