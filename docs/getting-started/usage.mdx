@@ -1,0 +1,80 @@
+---
+sidebar_position: 2
+---
+
+# Usage
+
+## Building a simple Grid
+
+`react-visual-grid` is built for simplicity, and the API is simple and intuitive.
+
+Let's get started by building a simple image grid with 30 images and using the default layout (vertical). To build the image grids, we will be making use of the [Lorem Picsum](https://picsum.photos/) service for generating images.
+
+```jsx
+import { Grid } from "react-visual-grid";
+import "react-visual-grid/dist/react-visual-grid.css";
+
+const images = Array.from({ length: 30 }, (_, index) => ({
+  src: `https://picsum.photos/id/${index+1})}/800/600`,
+  alt: `Image ${i + 1}`
+}));
+
+return (
+  <div>
+    <Grid
+      images={images}
+      width={800}
+      height={600}
+    />
+  </div>
+);
+```
+
+> It's mandatory to pass the `width` and `height` props of the Grid, as the library uses these values to render the optimal number of thumbnails.
+
+## Images Array
+
+As we have seen in the example, the images are passed as an array to the Grid component. Each image object comes with a set of properties that need to be set.
+
+Here is the complete list of all the image properties.
+
+> Only the `src` and `alt` properties are mandatory, as the rest of the properties are used for internal purposes.
+
+| Name    | Description                      | Type     | Default |
+| :------ | :------------------------------- | :------- | :------ |
+| src     | URL of the image                 | string   |         |
+| alt     | Alt text for the image           | string   |         |
+| width   | Width of the image               | number   | 100     |
+| height  | Height of the image              | number   | 100     |
+| id      | Unique of the image              | string   |         |
+| onClick | callback to be executed on click | Function |         |
+
+## Masonry
+
+`react-visual-grid` also exports a Masonry component for building beautiful masonry layouts with minimal configuration
+
+> Masonry grid allows you to build and arrange differently sized images in a uniform order
+
+```jsx
+import { Masonry } from "react-visual-grid";
+
+<Masonry fillMode="HORIZONTAL" height={1200} width={300}>
+  <span className={`rc-w-100 rc-h-100`}>
+    <img alt="Image 1" src={`https://picsum.photos/id/10/100/100`} />
+  </span>
+  <span className={`rc-w-200 rc-h-100`}>
+    <img alt="Image 2" src={`https://picsum.photos/id/11/100/100`} />
+  </span>
+  <span className={`rc-w-200 rc-h-100`}>
+    <img alt="Image 3" src={`https://picsum.photos/id/13/200/100`} />
+  </span>
+  <span className={`rc-w-100 rc-h-100`}>
+    <img alt="Image 4" src={`https://picsum.photos/id/14/100/100`} />
+  </span>
+  <span className={`rc-w-300 rc-h-150`}>
+    <img alt="Image 5" src={`https://picsum.photos/id/15/200/100`} />
+  </span>
+</Masonry>
+```
+
+> In masonary layout, we need to pass the images as children to the component.
