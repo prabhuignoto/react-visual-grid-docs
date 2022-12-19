@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'react-visual-grid',
+  title: 'React Visual Grid',
   tagline: 'Build beautiful and powerful image grids',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -59,7 +59,7 @@ const config = {
       navbar: {
         title: 'react-visual-grid',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'react-visual-grid Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -69,9 +69,9 @@ const config = {
           //   position: 'left',
           //   label: 'Tutorial',
           // },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Github', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/prabhuignoto/react-visual-grid',
             label: 'GitHub',
             position: 'right',
           },
@@ -82,24 +82,28 @@ const config = {
         links: [
           {
             title: 'Docs',
-            // items: [
-            //   {
-            //     label: 'Tutorial',
-            //     to: '/docs/intro',
-            //   },
-            // ],
+            items: [
+              {
+                label: 'Getting Started',
+                to: 'docs/getting-started/introduction',
+              },
+              {
+                label: 'Properties',
+                to: 'docs/props',
+              },
+            ],
           },
           {
             title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
+              // {
+              //   label: 'Stack Overflow',
+              //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              // },
+              // {
+              //   label: 'Discord',
+              //   href: 'https://discordapp.com/invite/docusaurus',
+              // },
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/prabhumurthy2',
@@ -109,10 +113,10 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/prabhuignoto/react-visual-grid',
@@ -120,10 +124,10 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Prabhu Murthy, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: darkCodeTheme,
+        theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),

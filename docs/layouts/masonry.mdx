@@ -1,0 +1,71 @@
+# Masonry
+
+Masonry layout allows you to create a grid of images with variable width and height. Masonry comes with two fill-mode options to change the way the images are displayed.
+
+## Fill Modes
+
+With `VERTICAL` fill mode, the images are placed from top to bottom, and once the boundary is reached, the next image will be rendered from the next column.
+Similarly, in the `HORIZONTAL` fill mode, the images are filled row by row, and once the boundary is reached, the next image will be placed from the next row.
+
+The Masonry component requires images to be passed as children and wrapped in either a span or div element. The width and height of the image should be specified as a class. Please name your class using the format rc-w-width and rc-h-height.
+
+Let's start by building a simple masonry grid with 10 items. For this example, we will try to fill the images row by row.
+
+
+```jsx
+import { Masonry } from "react-visual-grid";
+
+<Masonry fillMode="HORIZONTAL" height={1200} width={300}>
+  <span className={`rc-w-100 rc-h-100`}>
+    <img alt="Image 1" src={`https://picsum.photos/id/10/100/100`} />
+  </span>
+  <span className={`rc-w-200 rc-h-100`}>
+    <img alt="Image 2" src={`https://picsum.photos/id/11/100/100`} />
+  </span>
+  <span className={`rc-w-200 rc-h-100`}>
+    <img alt="Image 3" src={`https://picsum.photos/id/13/200/100`} />
+  </span>
+  <span className={`rc-w-100 rc-h-100`}>
+    <img alt="Image 4" src={`https://picsum.photos/id/14/100/100`} />
+  </span>
+  <span className={`rc-w-300 rc-h-150`}>
+    <img alt="Image 5" src={`https://picsum.photos/id/15/200/100`} />
+  </span>
+</Masonry>
+```
+
+Here is the visual representation of how the masonry will look like for the above code.
+
+![horizontal_masonry](horizontal_masonry.png)
+
+## Filling the images vertically
+
+Let's try to fill the images vertically instead of horizontally. We will use the same images as above, but this time we will use the `VERTICAL` fill mode.
+
+```jsx
+import { Masonry } from "react-visual-grid";
+
+<Masonry fillMode="VERTICAL" height={300} width={600}>
+  <span className={`rc-w-100 rc-h-100`}>
+    <img alt="Image 1" src={`https://picsum.photos/id/10/100/100`} />
+  </span>
+  <span className={`rc-w-100 rc-h-200`}>
+    <img alt="Image 2" src={`https://picsum.photos/id/11/100/100`} />
+  </span>
+  <span className={`rc-w-200 rc-h-300`}>
+    <img alt="Image 3" src={`https://picsum.photos/id/13/200/100`} />
+  </span>
+  <span className={`rc-w-150 rc-h-100`}>
+    <img alt="Image 4" src={`https://picsum.photos/id/14/100/100`} />
+  </span>
+  <span className={`rc-w-150 rc-h-200`}>
+    <img alt="Image 5" src={`https://picsum.photos/id/15/200/100`} />
+  </span>
+</Masonry>
+```
+
+Here is the visual representation of how the masonry will look like for the above code.
+
+![vertical_masonry](vertical_masonry.png)
+
+> use the `gap` property to add spacing between the images.
