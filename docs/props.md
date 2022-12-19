@@ -4,6 +4,29 @@
 
 Array of images with a `src` and `alt` property. This prop is used to build traditional image grids using the `Grid` component
 
+```jsx
+  const images = [
+    {
+      src: 'https://picsum.photos/200/300',
+      alt: 'image 1'
+    },
+    {
+      src: 'https://picsum.photos/200/300',
+      alt: 'image 2'
+    },
+    {
+      src: 'https://picsum.photos/200/300',
+      alt: 'image 3'
+    },
+    {
+      src: 'https://picsum.photos/200/300',
+      alt: 'image 4'
+    }
+  ];
+
+  <Grid images={images} width={"90%"} height={"70%"}/>
+```
+
 ## gridLayout
 
 configures the layout of the grid. can be either `HORIZONTAL` or `VERTICAL`. Defaults to `VERTICAL`
