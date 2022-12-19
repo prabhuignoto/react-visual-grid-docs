@@ -1,14 +1,27 @@
 ---
 sidebar_position: 2
+sidebar_label: Installation & Usage
 ---
+# Installation & Usage
 
-# Usage
+## Installation
+
+Install the package via `npm` or `yarn`
+
+```shell
+npm install --save react-visual-grid
+```
+
+```shell
+yarn add react-visual-grid
+```
 
 ## Building a simple Grid
 
-`react-visual-grid` is built for simplicity, and the API is simple and intuitive.
+`react-visual-grid` is designed for simplicity, and the API is straightforward and easy to use.
 
-Let's get started by building a simple image grid with 30 images and using the default layout (vertical). To build the image grids, we will be making use of the [Lorem Picsum](https://picsum.photos/) service for generating images.
+Let's begin by creating a simple image grid with 30 images and the default layout (`VERTICAL`).
+To generate the grid, we will be making use of the [Lorem Picsum](https://picsum.photos/) service for producing random images.
 
 ```jsx
 import { Grid } from "react-visual-grid";
@@ -38,11 +51,7 @@ It's mandatory to pass the `width` and `height` props of the Grid, as the librar
 
 As we have seen in the example, the images are passed as an array to the Grid component. Each image object comes with a set of properties that need to be set.
 
-Here is the complete list of all the image properties.
-
-:::info
-  Only the `src` and `alt` properties are mandatory, as the rest of the properties are used for internal purposes.
-:::
+Here is a full list of all the properties of an image object.
 
 | Name    | Description                      | Type     | Default |
 | :------ | :------------------------------- | :------- | :------ |
@@ -52,3 +61,7 @@ Here is the complete list of all the image properties.
 | height  | Height of the image              | number   | 100     |
 | id      | Unique of the image              | string   |         |
 | onClick | callback to be executed on click | Function |         |
+
+:::info
+  Only the `src` and `alt` properties are mandatory, as the rest of the properties are used for internal purposes.
+:::
