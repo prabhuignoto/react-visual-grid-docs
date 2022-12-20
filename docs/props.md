@@ -2,7 +2,7 @@
 
 ## images
 
-Array of images with a `src` and `alt` property. This prop is used to build traditional image grids using the `Grid` component
+Array of images with a `src` and `alt` property.
 
 ```jsx
   const images = [
@@ -29,7 +29,7 @@ Array of images with a `src` and `alt` property. This prop is used to build trad
 
 ## gridLayout
 
-configures the layout of the grid. can be either `HORIZONTAL` or `VERTICAL`. Defaults to `VERTICAL`
+Configures the layout of the grid. can be either `HORIZONTAL` or `VERTICAL`. Defaults to `VERTICAL`
 
 ```jsx
   <Grid gridLayout="VERTICAL" />
@@ -37,7 +37,7 @@ configures the layout of the grid. can be either `HORIZONTAL` or `VERTICAL`. Def
 
 ## gap
 
-configures the gap between the grid items (images). Defaults to `20px`.
+Configures the gap between the grid items (images). Defaults to `20px`.
 
 ```jsx
   <Grid gap="20px" />
@@ -45,7 +45,7 @@ configures the gap between the grid items (images). Defaults to `20px`.
 
 ## height
 
-configures the height of the grid. The height can be specified as pixels or as percentage. Defaults to `600px`.
+Sets the height of the grid. The height can be specified as pixels or as percentage. Defaults to `600px`.
 
 ```jsx
   <Grid height="600px" />
@@ -53,7 +53,7 @@ configures the height of the grid. The height can be specified as pixels or as p
 
 ## width
 
-configures the width of the grid. The width can be specified as pixels or as percentage. Defaults to `1200px`.
+Sets the width of the grid. The width can be specified as pixels or as percentage. Defaults to `1200px`.
 
 ```jsx
   <Grid width="1200px" />
@@ -61,8 +61,28 @@ configures the width of the grid. The width can be specified as pixels or as per
 
 ## theme
 
+Configures the theme of the grid.
+
+| Name                  | Description                           | Type   | Default             |
+| :-------------------- | :------------------------------------ | :----- | :------------------ |
+| primaryColor          | Primary color of the gallery          | string | #007fff             |
+| backgroundColor       | Background color of the gallery       | string | #000                |
+| controlBgColor        | Background color of the control strip | string | #303030             |
+| controlBtnColor       | Button color of the controls          | string | #595959             |
+| controlsBackDropColor | Backdrop color of the controls        | string | rgba(0, 0, 0, 0.95) |
+| thumbnailBgColor      | Background color of the Thumbnails    | string | #202020             |
+
 ```jsx
-  <Grid theme="dark" />
+  <Grid
+    gridLayout="vertical"
+    theme={{
+      backgroundColor: "#000",
+      controlBgColor: "#303030",
+      controlBtnColor: "#595959",
+      controlsBackDropColor: "rgba(0, 0, 0, 0.95)",
+      thumbnailBgColor: "#202020",
+    }}
+  />
 ```
 
 ## showProgressBar
@@ -75,7 +95,7 @@ The progress bar is a visual indicator of the images that have been loaded / see
 
 ## enableResize
 
-Enables the grid to be resized. Defaults to `true`. This enables a special resize handle for resizing the grid. Defaults to `true`
+Enables the grid resize feature. Defaults to `true`
 
 ```jsx
   <Grid enableResize />
