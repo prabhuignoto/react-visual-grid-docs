@@ -4,10 +4,11 @@ sidebar_position: 1
 
 # Thumbnail sizes
 
-The Grid component allows you to define the size of the thumbnails. This is set via the `imageSizes` prop. The `imageSizes` prop is an array of objects that defines the dimensions of the image.
-Thumbnail sizes can be changed by the user through the special control bar at the bottom. Three different thumbnail sizes are available: 1x, 2x, and 3x.
+You can specify the size of the thumbnails via the [imageSizes](../props.md#imagesizes) prop.The imageSizes prop is an array of objects that defines the dimensions of the image.
 
-The library comes with a default set of thumbnail sizes.
+The user can alter the size of the thumbnails using the control bar at the bottom. There are three thumbnail sizes available: 1x, 2x, and 3x.
+
+The library includes a set of thumbnail sizes by default.
 
 ```jsx
 {
@@ -26,7 +27,7 @@ The library comes with a default set of thumbnail sizes.
 };
 ```
 
-You can override the default set by passing your own array of objects to the `imageSizes` prop.
+You can override the default set by passing your own array of objects to the [imageSizes](../props.md#imagesizes) prop.
 
 ```jsx title="App.jsx"
 import { Grid } from "react-visual-grid";

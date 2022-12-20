@@ -35,6 +35,27 @@ Configures the layout of the grid. can be either `HORIZONTAL` or `VERTICAL`. Def
   <Grid gridLayout="VERTICAL" />
 ```
 
+## imageSizes
+
+Configures the thumbnail dimensions. You can set 3 different dimensions (1x,2x,3x) representing 3 zoom levels.
+
+```jsx
+<Grid images={images} gridLayout="vertical" width={1800} height={1200} imageSizes={{
+  "1X": {
+    width: 120,
+    height: 100,
+  },
+  "2X": {
+    width: 200,
+    height: 180,
+  },
+  "3X": {
+    width: 320,
+    height: 280,
+  },
+}} />
+```
+
 ## gap
 
 Configures the gap between the grid items (images). Defaults to `20px`.
