@@ -22,7 +22,7 @@ pnpm add react-visual-grid
 
 ## Building a simple Grid
 
-Let's begin by creating a simple image grid with 30 images and the default layout (`VERTICAL`).
+Let's begin by creating a simple image grid with 30 images.
 To generate the grid, we will be making use of the [Lorem Picsum](https://picsum.photos/) service for producing random images.
 
 ```jsx title="App.js"
@@ -46,14 +46,16 @@ return (
 ```
 
 :::info
+The component uses the `VERTICAL` layout as the default rendering mode. This can be changed by passing the [gridLayout](../props.md#gridlayout) prop to the Grid component.
+:::
+
+:::info
 It's mandatory to pass the `width` and `height` props of the Grid, as the library uses these values to render the optimal number of thumbnails.
 :::
 
 ## Images Array
 
-As we have seen in the example, the images are passed as an array to the Grid component. Each image object comes with a set of properties that need to be set.
-
-Here is a full list of all the properties of an image object.
+As we have seen in the example, the images are passed as an array to the Grid component. Each image object comes with a set of properties.
 
 | Name    | Description                      | Type     | Default |
 | :------ | :------------------------------- | :------- | :------ |
@@ -65,5 +67,5 @@ Here is a full list of all the properties of an image object.
 | onClick | callback to be executed on click | Function |         |
 
 :::info
-  Only the `src` and `alt` properties are mandatory, as the rest of the properties are used for internal purposes.
+  Only the `src` and `alt` properties are mandatory, as the rest of the properties are used for internal purposes and you can safely ignore.
 :::
