@@ -2,11 +2,9 @@
 sidebar_position: 2
 sidebar_label: Installation & Usage
 ---
-# Installation & Usage
+## Installation & Usage
 
-## Installation
-
-Install the package via `npm` or `yarn` or `pnpm`
+This section provides instructions on how to install and use the `react-visual-grid` package. The package can be installed using `npm`, `yarn`, or `pnpm`. Here are the commands for installation:
 
 ```bash
 npm install --save react-visual-grid
@@ -20,10 +18,9 @@ yarn add react-visual-grid
 pnpm add react-visual-grid
 ```
 
-## Building a simple Grid
+## Building a Simple Grid
 
-Let's begin by creating a simple image grid with 30 images.
-To generate the grid, we will be making use of the [Lorem Picsum](https://picsum.photos/) service for producing random images.
+Let's start by creating a simple image grid that contains 30 images. To generate the grid, we will use the [Lorem Picsum](https://picsum.photos/) service, which produces random images. Here is an example code snippet in `App.js`:
 
 ```jsx title="App.js"
 import { Grid } from "react-visual-grid";
@@ -44,18 +41,13 @@ return (
   </div>
 );
 ```
-
 :::info
-The component uses the `VERTICAL` layout as the default rendering mode. This can be changed by passing the [gridLayout](../props.md#gridlayout) prop to the Grid component.
-:::
-
-:::info
-It's mandatory to pass the `width` and `height` props of the Grid, as the library uses these values to render the optimal number of thumbnails.
+Please note that the `Grid` component uses the `VERTICAL` layout as the default rendering mode. You can change this by passing the [gridLayout](../props.md#gridlayout) prop to the `Grid` component. Additionally, it is mandatory to pass the `width` and `height` props to the `Grid`, as the library uses these values to render the optimal number of thumbnails.
 :::
 
 ## Images Array
 
-As we have seen in the example, the images are passed as an array to the Grid component. Each image object comes with a set of properties.
+As shown in the example above, the images are passed to the `Grid` component as an array. Each image object in the array comes with a set of properties:
 
 | Name    | Description                      | Type     | Default |
 | :------ | :------------------------------- | :------- | :------ |
@@ -63,9 +55,9 @@ As we have seen in the example, the images are passed as an array to the Grid co
 | alt     | Alt text for the image           | string   |         |
 | width   | Width of the image               | number   | 100     |
 | height  | Height of the image              | number   | 100     |
-| id      | Unique of the image              | string   |         |
-| onClick | callback to be executed on click | Function |         |
+| id      | Unique ID of the image           | string   |         |
+| onClick | Callback to be executed on click | Function |         |
 
 :::info
-  Only the `src` and `alt` properties are mandatory, as the rest of the properties are used for internal purposes and you can safely ignore.
+Please note that only the `src` and `alt` properties are mandatory, as the rest of the properties are used for internal purposes and can be safely ignored.
 :::
