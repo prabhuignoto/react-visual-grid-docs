@@ -4,10 +4,9 @@ sidebar_position: 2
 
 # Horizontal Layout
 
-In a horizontal layout, there will be a fixed set of rows, and the number of columns will be decided based on the number of items in the list.
-The number of rows will be calculated based on the width of the list and the width of the item. The width of the item is calculated based on the height of the container and the gap settings.
+In a horizontal layout, there will be a fixed number of rows, and the number of columns will be decided based on the number of items in the list. The number of rows will be calculated based on the width of the list and the width of the item. The width of the item is calculated based on the height of the container and the gap settings.
 
-The following image shows the horizontal layout with three rows and four columns.
+The following image shows the horizontal layout with four rows and four columns.
 
 ![Horizontal Layout](horizontal_layout.png)
 
@@ -16,8 +15,8 @@ import { Grid } from "react-visual-grid";
 import "react-visual-grid/dist/react-visual-grid.css";
 
 const images = Array.from({ length: 20 }, (_, index) => ({
-  src: `https://picsum.photos/id/${index+1})}/800/600`,
-  alt: `Image ${i + 1}`
+  src: `https://picsum.photos/id/${index+1}/800/600`,
+  alt: `Image ${index + 1}`
 }));
 
 return (
@@ -32,10 +31,10 @@ return (
 );
 ```
 
-The code is very similar to the vertical layout. The only difference is the `gridLayout` prop which is now set to `HORIZONTAL`.
+The code is very similar to the vertical layout. The only difference is the `gridLayout` prop, which is now set to `HORIZONTAL`.
 
 :::info
- The `gridLayout` prop is case sensitive. It should be either `HORIZONTAL` or `VERTICAL`
+The `gridLayout` prop is case-sensitive. It should be either `HORIZONTAL` or `VERTICAL`.
 :::
 
 ## CodeSandbox

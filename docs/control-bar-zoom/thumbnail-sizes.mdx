@@ -4,11 +4,9 @@ sidebar_position: 1
 
 # Thumbnail sizes
 
-You can specify the size of the thumbnails via the [imageSizes](../props.md#imagesizes) prop.The imageSizes prop is an array of objects that defines the dimensions of the image.
+Thumbnail sizes can be specified using the [imageSizes](../props.md#imagesizes) prop, which is an array of objects that defines the dimensions of the images. By default, the library includes a set of thumbnail sizes, namely 1x, 2x, and 3x, which the user can alter using the control bar at the bottom. 
 
-The user can alter the size of the thumbnails using the control bar at the bottom. There are three thumbnail sizes available: 1x, 2x, and 3x.
-
-The library includes a set of thumbnail sizes by default.
+The default set of thumbnail sizes are defined as follows:
 
 ```jsx
 {
@@ -27,27 +25,35 @@ The library includes a set of thumbnail sizes by default.
 };
 ```
 
-You can override the default set by passing your own array of objects to the [imageSizes](../props.md#imagesizes) prop.
+If you want to use a different set of thumbnail sizes, you can override the default set by passing your own array of objects to the [imageSizes](../props.md#imagesizes) prop. 
+
+Here is an example of how you can pass a new set of thumbnail sizes to the prop:
 
 ```jsx title="App.jsx"
 import { Grid } from "react-visual-grid";
 
 const App = () => {
   return (
-    <Grid images={images} gridLayout="vertical" width={1800} height={1200} imageSizes={{
-      "1X": {
-        width: 120,
-        height: 100,
-      },
-      "2X": {
-        width: 200,
-        height: 180,
-      },
-      "3X": {
-        width: 320,
-        height: 280,
-      },
-    }} />
+    <Grid 
+      images={images} 
+      gridLayout="vertical" 
+      width={1800} 
+      height={1200} 
+      imageSizes={{
+        "1X": {
+          width: 120,
+          height: 100,
+        },
+        "2X": {
+          width: 200,
+          height: 180,
+        },
+        "3X": {
+          width: 320,
+          height: 280,
+        },
+      }} 
+    />
   );
 };
 ```

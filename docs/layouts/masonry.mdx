@@ -1,16 +1,12 @@
 # Masonry
 
-Masonry layout allows you to create a grid of images with variable width and height. Masonry comes with two fill-mode options to change the way the images are displayed.
+The Masonry layout is a useful technique that enables you to create a grid of images with varying widths and heights. Masonry comes with two fill-mode options to change the way the images are displayed.
 
-## Fill Modes
+There are two fill modes: `VERTICAL` and `HORIZONTAL`. When using `VERTICAL` fill mode, the images are placed from top to bottom. Once the boundary is reached, the next image will be rendered from the next column. Similarly, in the `HORIZONTAL` fill mode, the images are filled row by row, and once the boundary is reached, the next image will be placed from the next row.
 
-With `VERTICAL` fill mode, the images are placed from top to bottom, and once the boundary is reached, the next image will be rendered from the next column.
-Similarly, in the `HORIZONTAL` fill mode, the images are filled row by row, and once the boundary is reached, the next image will be placed from the next row.
+To use the Masonry component, you must pass images as children and wrap them in either a span or div element. You should specify the width and height of the image as a class, naming your class using the format `rc-w-width` and `rc-h-height`.
 
-The Masonry component requires images to be passed as children and wrapped in either a span or div element. The width and height of the image should be specified as a class. Please name your class using the format rc-w-width and rc-h-height.
-
-Let's start by building a simple masonry grid with 10 items. For this example, we will try to fill the images row by row.
-
+Let's create a simple masonry grid with ten items to illustrate how to use the component. In this example, we will try to fill the images row by row. 
 
 ```jsx title="Masonry-Horizontal.jsx"
 import { Masonry } from "react-visual-grid";
@@ -34,13 +30,11 @@ import { Masonry } from "react-visual-grid";
 </Masonry>
 ```
 
-Here is the visual representation of how the masonry will look like for the above code.
+The visual representation of how the masonry will look is shown below.
 
 ![horizontal_masonry](horizontal_masonry.png)
 
-## Filling the images vertically
-
-Let's try to fill the images vertically instead of horizontally. We will use the same images as above, but this time we will use the `VERTICAL` fill mode.
+To fill the images vertically instead of horizontally, we can use the same images as above but with the `VERTICAL` fill mode.
 
 ```jsx title="Masonry-Vertical.jsx"
 import { Masonry } from "react-visual-grid";

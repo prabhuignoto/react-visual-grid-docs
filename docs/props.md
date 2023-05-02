@@ -1,97 +1,101 @@
 # Properties
 
-## images
+## Images
 
-Array of images with a `src` and `alt` property.
-
-```jsx
-  const images = [
-    {
-      src: 'https://picsum.photos/200/300',
-      alt: 'image 1'
-    },
-    {
-      src: 'https://picsum.photos/200/300',
-      alt: 'image 2'
-    },
-    {
-      src: 'https://picsum.photos/200/300',
-      alt: 'image 3'
-    },
-    {
-      src: 'https://picsum.photos/200/300',
-      alt: 'image 4'
-    }
-  ];
-
-  <Grid images={images} width={"90%"} height={"70%"}/>
-```
-
-## gridLayout
-
-Configures the layout of the grid. can be either `HORIZONTAL` or `VERTICAL`. Defaults to `VERTICAL`
+An array of images with a `src` and `alt` property. Each image is represented as an object with two properties: `src`, which is a string representing the URL of the image, and `alt`, which is a string representing the alternative text for the image (in case the image cannot be displayed). 
 
 ```jsx
-  <Grid gridLayout="VERTICAL" />
-```
-
-## imageSizes
-
-Configures the thumbnail dimensions. You can set 3 different dimensions (1x,2x,3x) representing 3 zoom levels.
-
-```jsx
-<Grid images={images} gridLayout="vertical" width={1800} height={1200} imageSizes={{
-  "1X": {
-    width: 120,
-    height: 100,
+const images = [
+  {
+    src: 'https://picsum.photos/200/300',
+    alt: 'image 1'
   },
-  "2X": {
-    width: 200,
-    height: 180,
+  {
+    src: 'https://picsum.photos/200/300',
+    alt: 'image 2'
   },
-  "3X": {
-    width: 320,
-    height: 280,
+  {
+    src: 'https://picsum.photos/200/300',
+    alt: 'image 3'
   },
-}} />
+  {
+    src: 'https://picsum.photos/200/300',
+    alt: 'image 4'
+  }
+];
+
+<Grid images={images} width={"90%"} height={"70%"}/>
 ```
 
-## gap
+## GridLayout
 
-Configures the gap between the grid items (images). Defaults to `20px`.
+This property configures the layout of the grid. It can be set to either `HORIZONTAL` or `VERTICAL`. If not specified, it defaults to `VERTICAL`.
 
 ```jsx
-  <Grid gap="20px" />
+<Grid gridLayout="VERTICAL" />
 ```
 
-## height
+## ImageSizes
 
-Sets the height of the grid. The height can be specified as pixels or as percentage. Defaults to `600px`.
+This property configures the dimensions of the thumbnails in the grid. It accepts an object with three keys (`1X`, `2X`, and `3X`) that represent three different zoom levels. The values associated with each key are objects containing two properties: `width` and `height`, which represent the dimensions of the thumbnail in pixels.
 
 ```jsx
-  <Grid height="600px" />
+<Grid
+  images={images}
+  gridLayout="vertical"
+  width={1800}
+  height={1200}
+  imageSizes={{
+    "1X": {
+      width: 120,
+      height: 100,
+    },
+    "2X": {
+      width: 200,
+      height: 180,
+    },
+    "3X": {
+      width: 320,
+      height: 280,
+    },
+  }}
+/>
 ```
 
-## width
+## Gap
 
-Sets the width of the grid. The width can be specified as pixels or as percentage. Defaults to `1200px`.
+This property configures the gap (in pixels) between the grid items (images). If not specified, it defaults to `20px`.
 
 ```jsx
-  <Grid width="1200px" />
+<Grid gap="20px" />
 ```
 
-## theme
+## Height
 
-Configures the theme of the grid.
+This property sets the height of the grid. The height can be specified in pixels or as a percentage of the container's height. If not specified, it defaults to `600px`.
 
-| Name                  | Description                           | Type   | Default             |
-| :-------------------- | :------------------------------------ | :----- | :------------------ |
-| primaryColor          | Primary color of the gallery          | string | #007fff             |
-| backgroundColor       | Background color of the gallery       | string | #000                |
-| controlBgColor        | Background color of the control strip | string | #303030             |
-| controlBtnColor       | Button color of the controls          | string | #595959             |
-| controlsBackDropColor | Backdrop color of the controls        | string | rgba(0, 0, 0, 0.95) |
-| thumbnailBgColor      | Background color of the Thumbnails    | string | #202020             |
+```jsx
+<Grid height="600px" />
+```
+## Width
+
+This property sets the width of the grid. The width can be specified in pixels or as a percentage of the container's width. If not specified, it defaults to `1200px`.
+
+```jsx
+<Grid width="1200px" />
+```
+
+## Theme
+
+This property configures the theme of the grid. It accepts an object with the following keys:
+
+| Name                    | Description                               | Type   | Default     |
+| :---------------------- | :---------------------------------------- | :----- | :---------- |
+| `primaryColor`          | The primary color of the gallery          | string | `#007fff`   |
+| `backgroundColor`       | The background color of the gallery       | string | `#000`      |
+| `controlBgColor`        | The background color of the control strip | string | `#303030`   |
+| `controlBtnColor`       | The button color of the controls          | string | `#595959`   |
+| `controlsBackDropColor` | The backdrop color of the controls        | string | `rgba(0, 0, |
 
 ```jsx
   <Grid
@@ -108,7 +112,7 @@ Configures the theme of the grid.
 
 ## showProgressBar
 
-The progress bar is a visual indicator of the images that have been loaded / seen. Defaults to `true`
+The `showProgressBar` is a feature that displays a visual indicator of the loaded or seen images. Its default value is `true`.
 
 ```jsx
   <Grid showProgressBar />
@@ -116,7 +120,7 @@ The progress bar is a visual indicator of the images that have been loaded / see
 
 ## enableResize
 
-Enables the grid resize feature. Defaults to `true`
+The `enableResize` feature allows users to resize the grid. Its default value is `true`.
 
 ```jsx
   <Grid enableResize />
@@ -124,7 +128,7 @@ Enables the grid resize feature. Defaults to `true`
 
 ## enableDarkMode
 
-displays a toggle button to switch between light and dark mode. Defaults to `true`
+The `enableDarkMode` feature enables a toggle button that users can click to switch between light and dark mode. Its default value is `true`.
 
 ```jsx
   <Grid enableDarkMode />
